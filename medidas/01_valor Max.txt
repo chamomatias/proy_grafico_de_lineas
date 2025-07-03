@@ -1,0 +1,16 @@
+01_valor Max =
+VAR _MaxValor =
+    // Obtiene el valor máximo de [01_valor] dentro del contexto definido por ALLSELECTED,
+    // que respeta los filtros externos (segmentadores, report level) pero quita otros del calendario.
+    MAXX (
+        ALLSELECTED ( '01_dim_calendario' ),
+        [01_valor]
+    )
+RETURN
+// Devuelve [01_valor] solo en la fila que coincide con ese máximo;
+// para el resto de las filas muestra BLANK() y evita duplicar el valor máximo.
+IF (
+    [01_valor] = _MaxValor,
+    [01_valor],
+    BLANK ()
+)

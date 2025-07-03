@@ -1,0 +1,8 @@
+01_valor = 
+// Devuelve la suma de 'valor' únicamente para las fechas que tienen datos válidos.
+// Si la fecha no cumple la condición, la función IF devuelve BLANK().
+IF (
+    [FechasConValor],                 // TRUE cuando la fecha visible está dentro del rango con registros
+    SUM ( '02_fact_table'[valor] )    // Agrega el valor en el contexto de filtro actual
+    // ELSE implícito: BLANK()
+)

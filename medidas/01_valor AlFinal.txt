@@ -1,0 +1,20 @@
+01_valor AlFinal = 
+VAR _MesFinal =
+    /* Determina el último mes visible con datos en [01_valor]. 
+       ALLSELECTED elimina otros filtros de calendario (pero respeta los filtros externos)
+       y FILTER descarta los meses donde la medida de referencia está en blanco. */
+    CALCULATE (
+        MAX ( '01_dim_calendario'[mes_termina] ),
+        FILTER (
+            ALLSELECTED ( '01_dim_calendario' ),
+            NOT ISBLANK ( [01_valor] )
+        )
+    )
+RETURN
+/* Devuelve [01_valor] solo cuando el mes actualmente visible
+   coincide con el mes final identificado; para el resto devuelve BLANK(). */
+IF (
+    SELECTEDVALUE ( '01_dim_calendario'[mes_termina] ) = _MesFinal,
+    [01_valor],
+    BLANK ()
+)
