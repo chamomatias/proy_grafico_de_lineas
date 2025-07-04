@@ -1,4 +1,4 @@
-02_valor_AA =
+06_valor_AA = 
 VAR fecha_actual =
     // Fecha visible en el contexto actual (no se usa en el cálculo,
     // pero puede servir para depuración o lecturas futuras).
@@ -12,7 +12,7 @@ VAR valor_prev_period =
 VAR tiene_valor_prev_period =
     // Verifica si en el mismo período del año anterior existe un valor válido.
     CALCULATE (
-        [FechasConValor],
+        [00_FechasConValor],
         DATEADD ( '01_dim_calendario'[fecha], -1, YEAR )
     )
 RETURN

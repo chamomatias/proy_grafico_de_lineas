@@ -1,0 +1,15 @@
+00_FechasConValor = 
+VAR Ultima_Fecha_Con_Datos = 
+    // Obtiene la última fecha con datos en '02_fact_table'
+    CALCULATE(
+        MAX('02_fact_table'[fecha]),
+        REMOVEFILTERS('01_dim_calendario') // Elimina filtros activos en calendario
+    )
+
+VAR Primera_Fecha_Visible = 
+    // Obtiene la primera fecha visible en el visual actual
+    MIN('01_dim_calendario'[fecha])
+
+RETURN
+    // Devuelve TRUE si la primera fecha visible es menor o igual a la última fecha con datos
+    Primera_Fecha_Visible <= Ultima_Fecha_Con_Datos

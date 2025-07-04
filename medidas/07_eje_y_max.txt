@@ -1,0 +1,14 @@
+07_eje_y_max = 
+// Calcula un tope para el eje Y del gráfico: 10 % por encima
+// del valor máximo de la medida [03_valor Max] en el contexto visible.
+VAR _Punto_Maximo =
+    MAXX (
+        // ALLSELECTED mantiene los filtros externos (segmentadores, filtros de página)
+        // y quita otros filtros de la tabla calendario.
+        ALLSELECTED ( '01_dim_calendario' ),
+        [03_valor Max]          // ← medida de referencia
+    )
+VAR _Resultado =
+    _Punto_Maximo * 1.1        // añade un margen del 10 %
+RETURN
+    _Resultado
