@@ -1,0 +1,92 @@
+llevar la visual al lienzo
+fecha al eje X
+TODAS las medidas al eje Y
+
+
+llevar un segmentador al lienzo
+anios al segmentador
+leve configuración al segmentador
+
+limpiamos titulo de la visual
+del eje X
+eje Y
+y leyendas
+
+
+Trabajaremos las líneas
+
+
+la linea de Dif --> la desactivamos
+
+La linea Valor
+Solido
+Ancho, 2
+Color; negro, Transparencia 50%
+
+La linea Valor AA
+Guiones
+Ancho, 1
+Color; Blanco al 60%, Transparencia 50%
+
+
+#######################################
+Marcadores
+Val al inicio
+Tamaño, 6
+Color; negro, Transparencia 50%
+
+Val al final
+Tamaño, 6
+Color; negro, Transparencia 50%
+
+Val Mini
+Tamaño, 6
+Color; rojo, Transparencia 50%
+
+Val Maximo
+Tamaño, 6
+Color; verde (0 150 0), Transparencia 50%
+
+
+#######################################
+
+Etiquetas
+desactivamos todos
+activamos 
+
+Valor al inicio
+Desplazamientos 10,10
+Valor de la fuente; Segoe Semibold
+Color; Blanco al 60%, transparencia 90%
+Linea de guia; Color; Blanco al 60%, Transp 0%
+
+
+Valor al final
+Desplazamientos 10,10
+Valor de la fuente; Segoe Semibold
+Color; Blanco al 60%, transparencia 90%
+Linea de guia; Color; Blanco al 60%, Transp 0%
+
+
+Valor al Minimo
+Posicion, abajo
+Desplazamientos 10,10
+Valor de la fuente; Segoe Semibold
+Color del valor; Amarillo (255,255,0), T 10%
+Fondo: rojo (255,255,255), T 10%
+Linea de guia; Color; rojo (255,255,255), Transp 0%
+
+Valor al Maximo
+Posicion, encima
+Desplazamientos 10,10
+Valor de la fuente; Segoe Semibold
+Color del valor; Amarillo (255,255,0), T 10%
+Fondo: verde(0,150,0), T 10%
+Linea de guia; Color; verde(0,150,0), Transp 0%
+
+
+#######################################
+
+
+
+
